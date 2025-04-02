@@ -56,6 +56,17 @@ TUXGATE/
 │── README.md             # Este arquivo
 ```
 
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias! Para isso:
+
+1. Fork este repositório.
+2. Crie uma branch para sua funcionalidade (git checkout -b minha-feature).
+3. Commit suas modificações (git commit -m 'Adiciona minha funcionalidade').
+4. Envie para o branch principal (git push origin minha-feature).
+5. Abra um Pull Request.
+
+
 ## Autor
 - **Maria Zefiro** - https://github.com/MariaZefiro
 
