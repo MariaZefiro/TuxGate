@@ -38,7 +38,7 @@ class SSHManager(QWidget):
     def initUI(self):
         # Configura a interface gráfica principal
         self.setWindowTitle("Gerenciador de Acesso SSH")
-        self.setGeometry(100, 100, 800, 800)
+        self.setGeometry(100, 100, 1420, 1100)
 
         main_layout = QVBoxLayout()
 
@@ -75,10 +75,9 @@ class SSHManager(QWidget):
         server_widget_container.setLayout(server_layout)
         self.splitter.addWidget(server_widget_container)
 
-        # Parte inferior: terminal com altura fixa
+        # Parte inferior: terminal com altura ajustável
         terminal_layout = QVBoxLayout()
         self.terminal_widget = QFrame(self)
-        self.terminal_widget.setFixedHeight(300)  # Define altura fixa para o terminal
         self.terminal_widget.setStyleSheet("background-color: black; font-family: Arial; color: white;")
         terminal_layout.addWidget(self.terminal_widget)
 
@@ -95,7 +94,7 @@ class SSHManager(QWidget):
 
         # Ajustar o comportamento do splitter
         self.splitter.setStretchFactor(0, 1)  # Parte superior (servidores) deve expandir
-        self.splitter.setStretchFactor(1, 0)  # Parte inferior (terminal) permanece fixa
+        self.splitter.setStretchFactor(1, 2)  # Parte inferior (terminal) deve ser ajustável
 
         # Adicionar o splitter ao layout principal
         main_layout.addWidget(self.splitter)
@@ -189,7 +188,7 @@ class SSHManager(QWidget):
             card.setObjectName(str(index)) 
             card.mouseDoubleClickEvent = lambda event, idx=index: self.connect_ssh_by_index(idx)
 
-            self.server_layout.addWidget(card, index // 3, index % 3) 
+            self.server_layout.addWidget(card, index // 5, index % 5) 
 
     def edit_server(self, index):
         # Abre um diálogo para editar as informações de um servidor
@@ -290,6 +289,9 @@ class SSHManager(QWidget):
             self.terminal_process.setArguments([
                 "-into", str(int(self.terminal_widget.winId())),
                 "-fa", "Arial", "-fs", "12",  # Aumentar o tamanho da fonte
+                "-geometry", "160x30",  # Define largura (120 colunas) e altura (30 linhas)
+                "-bg", "black",  # Define o fundo como preto
+                "-fg", "white",  # Define a cor do texto como branco
                 "-hold", "-e", ssh_command
             ])
             self.terminal_process.start()
