@@ -1,3 +1,68 @@
 [
-   
+    {
+        "name": "PASSBOLT",
+        "ip": "10.1.254.75",
+        "user": "usshd",
+        "password": "Leste@2025"
+    }, 
+    {
+        "name": "NEXUS",
+        "ip": "10.1.254.60",
+        "user": "usshd",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "LAB-NEXUS",
+        "ip": "10.1.254.183",
+        "user": "usshd",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "LESTEBOARD",
+        "ip": "10.1.254.68",
+        "user": "root",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "LAB-LESTEBOARD",
+        "ip": "10.1.254.163",
+        "user": "usshd",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "INTRANET",
+        "ip": "10.1.254.46",
+        "user": "maria_zefiro",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "LAB-INTRANET",
+        "ip": "10.1.254.97",
+        "user": "usshd",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "CHAMADOS",
+        "ip": "10.1.254.17",
+        "user": "root",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "LAB-CHAMADOS",
+        "ip": "10.1.254.16",
+        "user": "root",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "PORTARIA",
+        "ip": "10.1.254.41",
+        "user": "usshd",
+        "password": "Leste@2025"
+    },
+    {
+        "name": "ESTOQUE",
+        "ip": "10.1.254.74",
+        "user": "usshd",
+        "password": "Leste@2025"
+    }
 ]
